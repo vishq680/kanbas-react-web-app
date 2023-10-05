@@ -1,128 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <title>Home</title>
-</head>
-<body>
-    <table width="100%" > 
-        <thead>
 
-        </thead>   
-        <tbody valign = "top">
-        <tr>
-            <td>
-                <ul>
-                    <li><a href="./profile/index.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>           
-            </td>
-            <td>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="#">Module</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="./assignments/index.html">Assignments</a></li>
-                    <li><a href="#">Quizes</a></li>
-                    <li><a href="./grades.html">Grades</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="./settings/index.html">Settings</a></li>
-                </ul>  
-            </td>
-            <td>
-                <button type="button">Collapse All</button>
-                <button type="button">View Progress</button>
-                <select>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <div class="wd-grid-row">
+        <div class="wd-grid-col-left-sidebar">
+            <ul class="navbar-nav first-ul">
+                <li class="first-li">
+                    <a href="home.html" class="d-flex flex-column align-items-center no-underline nav-link color-white">
+                        <img src="../images/NU.png" alt="Northeastern" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item first-li">
+                    <a href="profile/index.html" class="d-flex flex-column align-items-center no-underline color-white">
+                        <i class="fa-regular fa-circle-user fa-2x color-red"></i>
+                        <div class="color-white">Account</div>
+                    </a>
+                </li>
+                <li class="nav-item first-li">
+                    <a href="./dashboard/index.html" class="d-flex flex-column align-items-center no-underline ">
+                        <i class="bi bi-speedometer2 fa-2x color-red"></i>
+                        <div class="color-white">Dasboard</div>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="home.html" class="d-flex flex-column align-items-center no-underline ">
+                        <i class="fas fa-book fa-2x active"></i>
+                        <div class="color-red">Courses</div>
+                    </a>
+                </li>
+                <li class="nav-item first-li">
+                    <a href="#" class="d-flex flex-column align-items-center no-underline ">
+                        <i class="fas fa-calendar-alt fa-2x color-red"></i>
+                        <div class="color-white">Calendar</div>
+                    </a>
+                </li>
+                <li class="nav-item first-li">
+                    <a href="#" class="d-flex flex-column align-items-center no-underline">
+                        <i class="fas fa-inbox fa-2x color-red"></i>
+                        <div class="color-white">Inbox</div>
+                    </a>
+                </li>
+                <li class="nav-item first-li">
+                    <a href="#" class="d-flex flex-column align-items-center no-underline ">
+                        <i class="far fa-clock fa-2x color-red"></i>
+                        <div class="color-white">History</div>
+                    </a>
+                </li>
+                <li class="nav-item first-li">
+                    <a href="#" class="d-flex flex-column align-items-center no-underline">
+                        <i class="fas fa-laptop fa-2x color-red"></i>
+                        <div class="color-white">Studio</div>
+                    </a>
+                </li>
+                <li class="nav-item first-li">
+                    <a href="#" class="d-flex flex-column align-items-center no-underline ">
+                        <i class="bi bi-box-arrow-right fa-2x color-red"></i>
+                        <div class="color-white">Commons</div>
+                    </a>
+                </li>
+                <li class="nav-item first-li">
+                    <a href="#" class="d-flex flex-column align-items-center no-underline ">
+                        <i class="far fa-question-circle fa-2x color-red"></i>
+                        <div class="color-white">Help</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col wd-grid-col-main-content">
+            <div>
+
+                <p> <i class="fa-solid fa-bars color-red fa-2x"> </i> CS4550.12672344.202412 > Modules</p>
+                <hr>
+            </div>
+            <div class="float-right">
+                <button type="button" class="btn btn-light">Collapse All</button>
+                <button type="button" class="btn btn-light">View Progress</button>
+                <select class="btn btn-light">
                     <option value="NO">Publish None</option>
                     <option selected value="SCIFI">
                         Publish All</option>
-                 </select>
-                <button type="button">Module</button>
-                <br>
-                <ul>
-                    <li>Week 0 - INTRO</li>
-                    <ul>
-                        <li>Leraning Objectives</li>
-                        <ul>
-                            <li>Introduction to the course</li>
-                            <li>Learn what is Web Development</li>
-                            <li>Creating a development environment</li>
-                            <li>Creating a Web Application</li>
-                            <li>Getting started with the 1st Assignment</li>
-                        </ul>
-                        <li>Reading</li>
-                        <ul>
-                            <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                            <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                        </ul>
-                        <li>Slides</li>
-                        <ul>
-                            <li><a href="#">Introduction to Web Development Links to an external site</a></li>
-                            <li><a href="#">Creating an HTTP server with Node.js Links to an exrternal site</a></li>
-                            <li><a href="#">Creating a React application Links to an external site</a></li>  
-                        </ul>
+                </select>
+                <button type="button" class="btn btn-danger">Module</button>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <div class="row">
+                <div class="col-2 sec-sidebar">
+                    <ul class="navbar-nav second-ul">
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left selected  no-underline">Home
+                            </a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="./home.html"
+                                class="d-flex flex-column align-items-left color-red no-underline">Modules</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Piazza</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Zoom
+                                Meetings</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="./assignments/index.html"
+                                class="d-flex flex-column align-items-left color-red no-underline">Assignments</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Quizzes</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="grades.html" class="d-flex flex-column align-items-left color-red no-underline">Grades</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">People</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Panopto
+                                Video</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#"
+                                class="d-flex flex-column align-items-left color-red no-underline">Discussions</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#"
+                                class="d-flex flex-column align-items-left color-red no-underline">Announcements</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Pages</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Files</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Rubrics</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Outcomes</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#"
+                                class="d-flex flex-column align-items-left color-red no-underline">Collaborations</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Syllabus</a>
+                        </li>
+                        <li class="nav-itemlist-group-item">
+                            <a href="#" class="d-flex flex-column align-items-left color-red no-underline">Progress
+                                Reports (EAB Navigate)</a>
+                        </li>
+                        <li class="nav-item second-list list-group-item">
+                            <a href="./settings/index.html" class="d-flex flex-column align-items-left color-red no-underline">Settings</a>
+                        </li>
                     </ul>
-                    <li>Week 1 - HTML</li>
-                    <ul>
-                        <li>Learning Objectives</li>
-                        <ul>
-                            <li>Learn how to create user interfaces with HTML</li>
-                            <li>Keep working on assignment 1</li>
-                            <li>Deploy the assignnment on Netlify</li>
+
+                </div>
+                <div class="col">
+                    <ul class="list-group sec-col">
+                        <li class="list-group-item">Week 0 - INTRO</li>
+                        <ul class="list-group">
+                            <li class="list-group-item">Leraning Objectives</li>
+                            <ul class="list-group sub-li">
+                                <li class="list-group-item sub-li">Introduction to the course</li>
+                                <li class="list-group-item sub-li">Learn what is Web Development</li>
+                                <li class="list-group-item sub-li">Creating a development environment</li>
+                                <li class="list-group-item sub-li">Creating a Web Application</li>
+                                <li class="list-group-item sub-li">Getting started with the 1st Assignment</li>
+                            </ul>
+                            <li class="list-group-item">Reading</li>
+                            <ul class="list-group">
+                                <li class="list-group-item sub-li">Full Stack Developer - Chapter 1 - Introduction</li>
+                                <li class="list-group-item sub-li">Full Stack Developer - Chapter 2 - Creating User
+                                    Interfaces with HTML</li>
+                            </ul>
+                            <li class="list-group-item">Slides</li>
+                            <ul class="list-group">
+                                <li class="list-group-item sub-li"><a class="sub-li no-underline color-red"
+                                        href="#">Introduction to Web Development Links to an external site</a></li>
+                                <li class="list-group-item sub-li"><a class="sub-li no-underline color-red"
+                                        href="#">Creating an HTTP server with Node.js Links to an exrternal site</a>
+                                </li>
+                                <li class="list-group-item sub-li"><a class="sub-li no-underline color-red"
+                                        href="#">Creating an HTTP server with Node.js Links to an exrternal site</a>
+                                </li>
+                                <li class="list-group-item sub-li"><a class="sub-li no-underline color-red"
+                                        href="#">Creating a React application Links to an external site</a></li>
+                            </ul>
+                        </ul class="list-group">
+                        <li class="list-group-item">Week 1 - HTML</li>
+                        <ul class="list-group">
+                            <li class="list-group-item">Learning Objectives</li>
+                            <ul class="list-group sub-li">
+                                <li class="list-group-item">Learn how to create user interfaces with HTML</li>
+                                <li class="list-group-item">Keep working on assignment 1</li>
+                                <li class="list-group-item">Deploy the assignnment on Netlify</li>
+                            </ul>
+                            <li class="list-group-item">Reading</li>
+                            <ul class="list-group sub-li">
+                                <li class="list-group-item">Full Stack Developer - Chapter 1 - Introduction</li>
+                                <li class="list-group-item">Full Stack Developer - Chapter 2 - Creating User Interfaces
+                                    with HTML</li>
+                            </ul>
                         </ul>
-                        <li>Reading</li>
-                        <ul>
-                            <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                            <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                        </ul>
+
                     </ul>
 
-                </ul>
+                </div>
+                <div class="col">
+                    <h3>Course Status</h3>
+                    <div>
+                        <button type="button" class="btn btn-sm">Unpublished</button>
+                        <button type="button" class="btn btn-sm">Published</button>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#" class="no-underline color-black">Import Existing Content</a></li>
+                        <li class="list-group-item"><a href="#" class="no-underline color-black">Import from Commons</a></li>
+                        <li class="list-group-item"><a href="#" class="no-underline color-black">Choose Home Page</a></li>
+                        <li class="list-group-item"><a href="#" class="no-underline color-black">View Course Stream</a></li>
+                        <li class="list-group-item"><a href="#" class="no-underline color-black">New Anouncement</a></li>
+                        <li class="list-group-item"><a href="#" class="no-underline color-black">New Analytics</a></li>
+                        <li class="list-group-item"><a href="#" class="no-underline color-black">View Course Notifications</a></li>
+                    </ul>
+                    <br>
+                    <h3>To Do</h3>
+                    <a href="#" class="no-underline">Grade A1 ENV + HTML</a>
+                    <br><br>
+                    <div>
+                        <h3>Upcoming Courses</h3>
+                        <a href="#" class="d-flex flex-column align-items-center no-underline">
+                            <i class="fas fa-calendar-alt"></i>
+                            View Calendar
+                        </a>
+                    </div>
+                    <ul>
+                        <li><a class="no-underline color-red" href="#">Lecture CS4500.12631.202410 Sept 7 at 11:45 am</a></li>
+                        <li><a class="no-underline color-red" href="#">Lecture CS4500.12631.202410 Sept 11 at 11:45 am</a></li>
+                        <li><a class="no-underline color-red" href="#">CS5610 06 SP23 Lecture Sept 11 at 6pm</a></li>
+                    </ul>
 
-            </td>
-            <td>
-                <h1>Course Status</h1>
-                <button type="button">Unpublished</button>
-                <button type="button">Published</button>
-                <ul>
-                    <li><a href="#">Import Existing Content</a></li>
-                    <li><a href="#">Import from Commons/a></li>
-                    <li><a href="#">Choose Home Page</a></li>  
-                    <li><a href="#">View Course Stream</a></li>  
-                    <li><a href="#">New Anouncement</a></li>  
-                    <li><a href="#">New Analytics</a></li>  
-                    <li><a href="#">View Course Notifications</a></li>  
-                </ul>
-                <h1>Comming Up</h1>
-                <a href="#">View Calendar</a>
-                <ul>
-                    <li><a href="#">Lecture CS4500.12631.202410 Sept 7 at 11:45 am</a></li>  
-                    <li><a href="#">Lecture CS4500.12631.202410 Sept 11 at 11:45 am</a></li>  
-                    <li><a href="#">CS5610 06 SP23 Lecture Sept 11 at 6pm</a></li>  
-                </ul>
 
+                </div>
 
-            </td>
-
-        </tr>
-        </tbody>
-     </table>
+                </tr>
+                </tbody>
+                </table>
 </body>
+
 </html>
