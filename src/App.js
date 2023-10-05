@@ -17,6 +17,8 @@ function App() {
         >
           Learn React
         </a>
+        <a href="../public/kanbas/home.html"> Home link</a>
+        <a href="../public/labs/a2/">Lab A2 Link</a>
       </header>
     </div>
   );
