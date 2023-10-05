@@ -9,8 +9,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a href="../public/kanbas/home.html"> Home link</a>
-        <a href="../public/labs/a2/index.html">Lab A2 Link</a>
+        <a href="../kanbas/home.html"> Home link</a>
+        <a href="../labs/a2/index.html">Lab A2 Link</a>
       </header>
     </div>
   );
