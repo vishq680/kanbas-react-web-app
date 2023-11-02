@@ -1,0 +1,117 @@
+.color-red {
+  color: red;
+  /* Change the color to your desired color */
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.color-white {
+  color: white;
+}
+
+.table-row {
+  height: 100%;
+}
+
+.w-10 {
+  width: 10%
+}
+
+.main-table {
+  height: 100vh;
+}
+
+.active {
+  background-color: white;
+  color: gray;
+  margin: 0px;
+}
+
+
+i {
+  padding: 1mm;
+}
+
+.second-col {
+  padding-left: 8mm;
+  width: 80px;
+}
+
+.second-list {
+  padding-top: 18px;
+  padding-left: 2mm ;
+}
+.selected {
+  color: black;
+  border-left: 2px solid;
+  border-color: black;
+  padding-left: 9px;
+}
+
+.first-col {
+  background-color: black;
+  text-align: center;
+  width: 80px;
+}
+.first-ul {
+  width: 80px;
+  margin: 6px;
+  padding: 6px;
+}
+.first-li {
+  text-align: center;
+}
+.second-ul {
+  width: 195px;
+  margin-left: 22px;
+}
+.user-icon {
+  color: gray;
+}
+.yt-link {
+  text-decoration: none;
+  color: red;
+}
+.third-col {
+  padding-right: 40px ;
+}
+.btn-edit {
+  text-align: center;
+  padding: 15px;
+}
+.btn-edit>a{
+  margin: 10px;
+}
+.wd-grid-col-left-sidebar {
+  width: 80px;
+  float: left;
+  background-color: black;
+  text-align: center;
+}
+.wd-grid-col-main-content {
+  width: 85%;
+  float: left;
+}
+
+.wd-grid-col-right-sidebar {
+  width: 20%;
+  float: left;
+}
+.wd-grid-row {
+  clear: both;
+  width: 100%;
+}
+.inline-block {
+  display: inline-block;
+  padding: 15px;
+}
+.sec-sidebar {
+  width: 195px;
+  float: left;
+  text-align: left;
+}
+.sec-content {
+  float: left;
+}
