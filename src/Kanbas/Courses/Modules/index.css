@@ -130,4 +130,6 @@
   } 
 
 
-  
+  .form-control {
+    margin: 10px;
+  }
