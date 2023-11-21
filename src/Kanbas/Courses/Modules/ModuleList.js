@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "./index.css";
@@ -8,45 +8,38 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 
 
 function ModuleList() {
   const { courseId } = useParams();
-  // const [modules, setModules] = useState(db.modules);
-  // const [module, setModule] = useState({
-  //   name: "New Module",
-  //   description: "New Description",
-  //   course: courseId,
-  // });
 
-  // const addModule = (module) => {
-  //   setModules([
-  //     { ...module, _id: new Date().getTime().toString() },
-  //     ...modules,
-  //   ]);
-  // };
-  // const deleteModule = (moduleId) => {
-  //   setModules(modules.filter(
-  //     (module) => module._id !== moduleId));
-  // };
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+      );
+  }, [courseId]);
 
-  // const updateModule = () => {
-  //   setModules(
-  //     modules.map((m) => {
-  //       if (m._id === module._id) {
-  //         return module;
-  //       } else {
-  //         return m;
-  //       }
-  //     })
-  //   );
-  // }
 
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
 
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
 
 
 
@@ -58,7 +51,7 @@ function ModuleList() {
 
             type="button"
             class="btn btn-success"
-            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+            onClick={handleAddModule}>
             Add
           </button>
           <button
@@ -102,7 +95,7 @@ function ModuleList() {
               <button
                 type="button"
                 class="btn btn-danger"
-                onClick={() => dispatch(deleteModule(module._id))}>
+                onClick={() => handleDeleteModule(module._id)}>
                 Delete
               </button>
 
